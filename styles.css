@@ -67,9 +67,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -79,120 +79,173 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 /* END OF RESET ----------------------------------------------------- */
 
 
 /* CUSTOM PROPERTIES ------------------------------------------------ */
 
-/* ### Primary
-- Red: hsl(0, 100%, 74%) 
-- Green: hsl(154, 59%, 51%)
-
-### Accent
-- Blue: hsl(248, 32%, 49%)
-### Neutral
-- Dark Blue: hsl(249, 10%, 26%) 
-- Grayish Blue: hsl(246, 25%, 77%) */
-
 :root {
-    --primary-moderate-violet: hsl(263, 55%, 52%);
-    --primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
-    --primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
-    --primary-white: hsl(0, 0%, 100%);
-    --neutral-gray: hsl(0, 0%, 81%);
-    --neutral-light-grayish-blue: hsl(210, 46%, 95%);
-
-    --fw-light: 400;
-    --fw-normal: 500;
-    --fw-bold: 600;
-    --fw-bolder: 700;
-
-    /* 
-1. "Verified Graduate" has the same color
-as the person's name with 50% opacity
-2. Review paragraphs inside the quotations
-have the same color as well, but are at 70% opacity
-    */
+  --primary-white: white;
+  --primary-dark-white: hsl(240, 14%, 90%);
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-grayish-Blue: hsl(246, 25%, 77%);
+  --fw-light: 400;
+  --fw-normal: 500;
+  --fw-bold: 600;
+  --fw-bolder: 700;
 }
 
-h1 {
-    font-size: 0;
-    width: 1px;
-    height: 1px;
-    display: inline-block;
-    overflow: hidden;
-    position: absolute;
-    border: 0!important;
-    padding: 0!important;
-    margin: 0!important;
-    clip: rect(1px,1px,1px,1px);
-}
 
 body {
-    font-size: 0.8125rem;
-    padding: 4.5rem 1.5rem;
-    background-color: var(--neutral-light-grayish-blue);
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    min-height: 100vh;
+  font-size: 1rem;
+  padding: 4.5rem 1.5rem;
+  background-color: var(--primary-red);
+  font-family: poppins, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-main {
-    display: grid;
-    gap: 1.465rem;
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  color: var(--primary-white);
+  text-align: center;
 }
 
-.card {
-    padding: 1.5rem 1.9rem;
-    border-radius: 0.5rem;
+.intro-area {
+  margin: 1rem 0;
 }
 
-
-/* UTILITIES -------------------------------------------------------- */
-
-.card-1 {
-    background: var(--primary-moderate-violet) url(images/bg-pattern-quotation.svg) no-repeat right 11% top;
+.primary-heading {
+  font-size: 1.8rem;
+  font-weight: var(--fw-bolder);
 }
 
-.card-2 {
-    background-color: var(--primary-very-dark-grayish-blue);
+.text {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 2;
+  color: var(--primary-white);
 }
 
-.card-3,
-.card-5 {
-    background-color: var(--primary-white);
+.login-area {
+  margin: 1rem 0;
 }
 
-.card-4 {
-    background-color: var(--primary-very-dark-blackish-blue);
+.btn {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
 }
 
-.font-light {
-    color: var(--primary-white);
+#login-form {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background-color: var(--primary-white);
+  border-radius: 12px;
 }
 
-.font-dark {
-    color: var(--primary-very-dark-blackish-blue);
+.form__input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1px solid var(--neutral-grayish-Blue);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+
 }
 
-/* FOOTER ----------------------------------------------------------- */
-
-.attribution {
-    margin-top: 0.5rem;
-    font-size: 0.625rem;
-    text-align: center;
-    color: var(--primary-moderate-violet);
+.subtext {
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--neutral-grayish-Blue);
 }
 
-.attribution a {
-    color: var(--primary-moderate-violet);
-    text-decoration: none;
-    font-weight: var(--fw-bold);
+.subtext a {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+}
+
+.btn--featured {
+  padding: 1rem 4rem;
+  background-color: var(--accent);
+  border: none;
+}
+
+.btn--featured span {
+  color: var(--neutral-grayish-Blue);
+  font-weight: var(--fw-light);
+}
+
+.btn--submit {
+  border: none;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  background-color: var(--primary-green);
+  letter-spacing: 0.2ch;
+  padding: 1rem 1rem;
+  margin: 0.5rem 0;
 }
 
 /* MEDIA QUERIES ---------------------------------------------------- */
 
-@media (min-width: 48em) {
-    body {
-        padding-inline: 4rem;
-    }
+@media (min-width: 768px) {
+  body {
+    padding-inline: 4rem;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: none;
+  }
+
+  .intro-area {
+    text-align: left;
+    margin: 0 1rem;
+    max-width: 500px;
+  }
+
+  .text {
+    font-size: 0.8125rem;
+  }
+
+  .login-area {
+    margin: 0 1rem;
+    max-width: 500px;
+  }
+
+  #login-form{
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+
+  }
+
+  .form__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+
+  }
+
+  .subtext {
+    font-size: 0.7rem;
+  }
+
+  .btn--featured {
+    padding: 0.8rem 4rem;
+  }
+
 }

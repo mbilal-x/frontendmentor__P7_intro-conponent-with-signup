@@ -108,6 +108,12 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  /* background */
+  background-image: url('./images/bg-intro-mobile.png');
+  background-color: var(--primary-red);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .panel {
@@ -202,6 +208,7 @@ body {
 
 @media (min-width: 768px) {
   body {
+    background-image: url('./images/bg-intro-desktop.png');
     padding-inline: 4rem;
   }
 
@@ -210,6 +217,7 @@ body {
     flex-direction: row;
     align-items: center;
     max-width: none;
+    gap: 2rem;
   }
 
   .intro-area {
@@ -218,8 +226,8 @@ body {
     max-width: 500px;
   }
 
-  .text {
-    font-size: 0.8125rem;
+  .primary-heading {
+    font-size: 2.6rem;
   }
 
   .login-area {
@@ -227,7 +235,7 @@ body {
     max-width: 500px;
   }
 
-  #login-form{
+  #login-form {
     margin-top: 1rem;
     padding: 1.5rem 2rem;
 

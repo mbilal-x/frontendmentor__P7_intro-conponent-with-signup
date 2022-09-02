@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/mbilal-x/frontendmentor__P7_intro-conponent-with-signup)
+- Live Site URL: [Live Site](https://mbilal-x.github.io/frontendmentor__P7_intro-conponent-with-signup)
 
 ## My process
 My focus on this design was to practice BEM naming system for classses.
